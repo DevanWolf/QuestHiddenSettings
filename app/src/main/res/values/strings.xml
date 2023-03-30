@@ -4,15 +4,9 @@
 
     <string name="brightness">Set Brightness to Minimum\n</string>
     <string name="brightnessDesc">Sets the screen brightness slightly lower than the slider allows</string>
-
-    <string name="guardian">Open Advanced Guardian Settings\n</string>
-    <string name="guardianDesc">Allows for multiple desks and couches, as well as walls</string>
-
+    
     <string name="dns">Set System Wide Adblock/DNS\n</string>
     <string name="dnsDesc">Choose from a list of private DNS server</string>
-
-    <string name="nightlight">Open Blue Light Filter Settings\n</string>
-    <string name="nightlightDesc">Set blue light filter to run on a schedule</string>
 
     <string name="datetime">Open Date and Time Settings\n</string>
     <string name="datetimeDesc">Disable network time to change freely</string>
