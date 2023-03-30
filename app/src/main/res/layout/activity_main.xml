@@ -56,40 +56,6 @@
         app:layout_constraintStart_toStartOf="@+id/brightnessBtn" />
 
     <Button
-        android:id="@+id/guardianBtn"
-        style="@style/OculusButtonStyle"
-        android:layout_width="700dp"
-        android:layout_height="70dp"
-
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonbg"
-        android:backgroundTint="@color/ic_banner_background"
-        android:backgroundTintMode="multiply"
-        android:text="@string/guardian"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:iconSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/brightnessBtn" />
-
-    <TextView
-        android:id="@+id/guardianTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/guardianDesc"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@id/guardianBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guardianBtn" />
-
-    <Button
         android:id="@+id/dnsBtn"
         style="@style/OculusButtonStyle"
         android:layout_width="345dp"
@@ -109,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guardianBtn" />
+        app:layout_constraintTop_toBottomOf="@id/brightnessBtn" />
 
     <TextView
         android:id="@+id/dnsTxt"
@@ -124,42 +90,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/dnsBtn" />
-
-    <Button
-        android:id="@+id/nightlightBtn"
-        style="@style/OculusButtonStyle"
-        android:layout_width="345dp"
-        android:layout_height="70dp"
-
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonbg"
-        android:backgroundTint="@color/ic_banner_background"
-        android:backgroundTintMode="multiply"
-        android:text="@string/nightlight"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:translationX="178dp"
-        android:typeface="normal"
-        app:iconSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guardianBtn" />
-
-    <TextView
-        android:id="@+id/nightlightTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/nightlightDesc"
-        android:textColor="#FFFFFF"
-        android:translationX="178dp"
-        app:layout_constraintBottom_toBottomOf="@id/nightlightBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/nightlightBtn" />
 
     <Button
         android:id="@+id/datetimeBtn"
@@ -191,11 +121,11 @@
         android:layout_marginBottom="10dp"
         android:text="@string/datetimeDesc"
         android:textColor="#FFFFFF"
-        android:translationX="178dp"
-        app:layout_constraintBottom_toBottomOf="@id/appsBtn"
+        android:translationX="-175dp"
+        app:layout_constraintBottom_toBottomOf="@id/datetimeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/nightlightBtn" />
+        app:layout_constraintStart_toStartOf="@id/datetimeBtn" />
 
     <Button
         android:id="@+id/appsBtn"
@@ -217,7 +147,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nightlightBtn" />
+        app:layout_constraintTop_toBottomOf="@id/dnsBtn" />
 
     <TextView
         android:id="@+id/appsTxt"
