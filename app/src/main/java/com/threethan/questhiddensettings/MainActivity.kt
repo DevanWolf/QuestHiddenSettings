@@ -29,9 +29,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val brightnessBtn = findViewById<Button>(R.id.brightnessBtn)
-        val guardianBtn = findViewById<Button>(R.id.guardianBtn)
         val dnsBtn = findViewById<Button>(R.id.dnsBtn)
-        val nightlightBtn = findViewById<Button>(R.id.nightlightBtn)
         val datetimeBtn = findViewById<Button>(R.id.datetimeBtn)
         val appsBtn = findViewById<Button>(R.id.appsBtn)
         val accessibilityBtn = findViewById<Button>(R.id.accessiblityBtn)
@@ -50,25 +48,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        guardianBtn.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle("Info and Warning")
-            builder.setMessage(
-                "This menu gives you a lot more control over your home setup with guardian, however not all of these features are complete.\n"+
-                "Additional couches and desks work great, and you can even set the depth of them.\n" +
-                "IF YOU HAVE ANY WALLS SET, DO NOT SET YOUR ENVIRONMENT TO \"STUDIO\". YOUR HOME APP WILL CRASH!\n" +
-                "If anything goes wrong, run the following command through adb: \"adb shell pm clear com.oculus.guardian"
-            )
-            builder.setPositiveButton("I Understand", { _, _ ->
-                val intent = Intent(Intent.ACTION_VIEW)
-                intent.component = ComponentName("com.oculus.vrshell", "com.oculus.vrshell.MainActivity")
-                intent.data = Uri.parse("systemux://guardian/room-capture")
-                this.startActivity(intent)
-            })
-            builder.setNegativeButton("Cancel", {_,_ -> })
-            builder.create().show()
-        }
-
         dnsBtn.setOnClickListener {
             val items = arrayOf<CharSequence>("Mullvad Adblock (Blocks Ads, Private)", "Mullvad DNS (Private)", "Adguard DNS (Blocks Ads)", "Cloudflare DNS (Fast)", "Quad9 (Private)", "Google DNS")
             val hostnames = arrayOf<CharSequence>("adblock.doh.mullvad.net", "doh.mullvad.net", "dns.adguard.com", "1dot1dot1dot1.cloudflare-dns.com", "dns.google")
@@ -84,10 +63,7 @@ class MainActivity : AppCompatActivity() {
                 val builder2 = AlertDialog.Builder(this)
                 builder2.setTitle("Copied hostname!")
                 builder2.setMessage(
-                    "1. Click next to open network settings\n" +
-                    "2. Scroll down, press Advanced, then Private DNS\n" +
-                    "3. Select Private DNS provider hostname. Delete all the text, then press and hold to paste \""+hostnames[item]+"\"\n" +
-                    "4. Press OK and enjoy!"
+                    "1. Click next to open network settings\n2. Scroll down, press Advanced, then Private DNS\n3. Select Private DNS provider hostname. Delete all the text, then press and hold to paste \""+hostnames[item]+"\"\n4. Press OK and enjoy!"
                 )
                 builder2.setPositiveButton("Next", DialogInterface.OnClickListener { _, _ ->
                     settingsActivity("NetworkDashboardActivity")
@@ -96,10 +72,6 @@ class MainActivity : AppCompatActivity() {
                 }
             builder.setNegativeButton("Cancel") { _, _ -> }
             builder.create().show()
-        }
-
-        nightlightBtn.setOnClickListener {
-            settingsActivity("NightDisplaySettingsActivity")
         }
 
         datetimeBtn.setOnClickListener {
@@ -119,11 +91,7 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Notice")
             builder.setMessage(
-                "Many of the settings here don't work.\n"+
-                "You can enable mono audio or adjust balance,\n"+
-                "enable high-contrast text system wide,\n"+
-                "or adjust text size without restarting.\n\n"+
-                "Use Oculus's accessibility for working color filters."
+                "Many of the settings here don't work.\nYou can enable mono audio or adjust balance,\nenable high-contrast text system wide,\nor adjust text size without restarting.\n\nUse Oculus's accessibility for working color filters."
             )
             builder.setPositiveButton("Continue", { _, _ ->
                 settingsActivity("AccessibilitySettingsActivity")
@@ -138,4 +106,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-
